@@ -1,11 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image } from 'react-native';
+import Header from './components/Header';
+// import { Image } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+      <View >
+        <View style={styles.container}>
+          <Header>
+            <Image resizeMode='stretch'
+              style={{width:200, height: 30,marginTop:29, }}
+              source={require('./assets/headerImage1.png')}
+            />
+          </Header>
+          <Header>
+            <Image resizeMode='stretch'
+              style={{ width: 100, height: 30, marginTop: 29, }}
+              source={require('./assets/headerImage2.png')}
+            />
+          </Header>
+        </View>
       </View>
     );
   }
@@ -13,9 +28,10 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    display:'flex',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#000',
+    flexDirection:'row',
+    justifyContent:'space-around'
   },
 });
