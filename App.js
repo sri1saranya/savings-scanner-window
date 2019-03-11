@@ -20,8 +20,17 @@ export default class App extends React.Component {
               source={require('./assets/headerImage2.png')}
             />
           </Header>
-        </View>
+
+        
+      <Footer>
+        <Image resizeMode='stretch'
+              style={{ width: 100, height: 30, marginTop: 29, }}
+              source={require('./assets/footerImage2.png')}
+               />
+              </Footer>
+              </View>
       </View>
+
     );
   }
 }
